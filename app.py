@@ -11,11 +11,11 @@ st.title("EduBias Detector")
 st.image(IMAGE_ADDRESS)
 
 option = st.selectbox(
-    "What type of media you would like to upload?",
+    "Please select the type of educational resource you have: PDF, Image, or Text",
     ("PDF", "Text", "Image"),
 )
 
-st.write("You selected:", option)
+#st.write("You selected:", option)
 
 if option == 'PDF':
     uploaded_file = st.file_uploader("Upload a PDF file", type="pdf")
@@ -30,8 +30,23 @@ if option == 'PDF':
             pdf_viewer(PDF_NAME)
 
 if option == 'Text':
-    st.text_input("Enter your text")
+    text=st.text_input("Enter your text")
+    if text:
+        with st.sidebar:
+            st.subheader("TEXT 💬")
+            #displaying the entered text
+            st.write(text)
+    
 
 if option == 'Image':
     image=st.file_uploader("Upload an image",type= ['jpeg','png','jpg'])
+    
+    if image:
+        with st.sidebar:
+            st.subheader("IMAGE 📚")
+            #displaying the image
+            st.image(image, caption = "Uploaded Image")
 
+
+    
+    
