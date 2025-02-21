@@ -49,4 +49,3 @@ def bias_analyser(text: str):
     answer = chain.invoke({"text":text})
 
     return answer
-'''
