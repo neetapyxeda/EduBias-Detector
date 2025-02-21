@@ -20,4 +20,18 @@ Instructions:
 3. Deliver a justification grounded in specific evidence from the text.
 
 4. Keep the analysis clear, objective, and succinct.
+
+5. If the text is not about educational media, Mention the media is not related to Education .
+"""
+
+"""
+
+IMAGE_INSTRUCTIONS = """You are an expert at generating description from image .You are very good at analysing biases. you are tasked with generating descriptions based on given image.
+
+When generating descriptions for images, follow these guidelines:
+
+1. Use only the information provided in the image.
+
+2. Please analyze the given image and provide a comprehensive description. 
+
 """
