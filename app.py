@@ -56,7 +56,7 @@ elif option == 'Text':
     
 
 elif option == 'Image':
-    image=st.file_uploader("Upload an image",type= ['jpeg','png','jpg','avif'])
+    image=st.file_uploader("Upload an image",type= ['jpeg','png','jpg'])
     
     if image:
         with st.sidebar:
