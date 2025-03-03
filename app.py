@@ -48,8 +48,8 @@ elif option == 'Text':
             st.subheader("TEXT 💬")
             #displaying the entered text
             st.write(user_text)
-       with st.spinner("Detecting bias............"):
-           answer = bias_analyser(user_text)
+        with st.spinner("Detecting bias............"):
+            answer = bias_analyser(user_text)
 
         #Display the bias     
         st.subheader(" Bias Analyser Result")
