@@ -31,7 +31,7 @@ if option == 'PDF':
             st.subheader("PDF 📖")
             pdf_viewer(PDF_NAME)
 
-        with st.spinner("Extracting text from PDF and Analysing bias............"):
+        with st.spinner("Extracting text from PDF and detecting bias............"):
             extracted_text = extract_text_from_pdf(PDF_NAME)
             # get the answer
             answer = bias_analyser(extracted_text)
@@ -48,7 +48,8 @@ elif option == 'Text':
             st.subheader("TEXT 💬")
             #displaying the entered text
             st.write(user_text)
-            answer = bias_analyser(user_text)
+       with st.spinner("Detecting bias............"):
+           answer = bias_analyser(user_text)
 
         #Display the bias     
         st.subheader(" Bias Analyser Result")
@@ -66,7 +67,7 @@ elif option == 'Image':
             with open("myImage.jpg", "wb") as f:
                 f.write(image.getbuffer())
             
-        with st.spinner("Extracting information from the input Image and Analysing bias............"):
+        with st.spinner("Extracting information from the input Image and detecting bias............"):
             extracted_text=extract_text_from_image("myImage.jpg")
             # get the answer
             answer = bias_analyser(extracted_text)
