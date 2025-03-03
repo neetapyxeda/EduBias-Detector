@@ -2,6 +2,7 @@ import streamlit as st
 from streamlit_pdf_viewer import pdf_viewer
 from rag import extract_text_from_pdf
 from rag import bias_analyser
+from rag import extract_text_from_image
 
 
 PDF_NAME = "uploaded.pdf"
@@ -17,7 +18,7 @@ option = st.selectbox(
     "Please select the type of educational resource you have",
     ("PDF", "Text", "Image"),
 )
-
+extract_text_from_image()
 if option == 'PDF':
     uploaded_file = st.file_uploader("Upload a PDF file", type="pdf")
 
