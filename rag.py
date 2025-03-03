@@ -33,6 +33,11 @@ def extract_text_from_pdf(pdf_path):
     final_text = pdf_text.strip().replace("\n", "")        
     return pdf_text
 
+#Function
+
+def generate_text_from_image():
+    
+
 
 
 #Function 
