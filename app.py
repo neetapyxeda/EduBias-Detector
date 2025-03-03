@@ -56,7 +56,7 @@ elif option == 'Text':
     
 
 elif option == 'Image':
-    image=st.file_uploader("Upload an image",type= ['jpeg','png','jpg'])
+    image=st.file_uploader("Upload an image",type= ['jpeg','png','jpg','avif'])
     
     if image:
         with st.sidebar:
@@ -66,7 +66,7 @@ elif option == 'Image':
             with open("myImage.jpg", "wb") as f:
                 f.write(image.getbuffer())
             
-        with st.spinner("Extracting text from input Image and Analysing bias............"):
+        with st.spinner("Extracting information from the input Image and Analysing bias............"):
             extracted_text=extract_text_from_image("myImage.jpg")
             # get the answer
             answer = bias_analyser(extracted_text)
