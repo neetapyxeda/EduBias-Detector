@@ -63,10 +63,10 @@ elif option == 'Image':
             st.subheader("IMAGE 🏞️")
             #displaying the image
             st.image(image, caption = "Uploaded Image")
-            with open("image.jpg", "wb") as f:
-                f.write(uploaded_file.getbuffer())
+            with open("myImage.jpg", "wb") as f:
+                f.write(image.getbuffer())
             
-            extract_text_from_image("image.jpg")
+            extract_text_from_image("myImage.jpg")
 
 
 
