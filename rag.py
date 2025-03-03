@@ -36,8 +36,8 @@ def extract_text_from_pdf(pdf_path):
 #Function
 
 #def generate_text_from_image():
-    
-response = client.chat.completions.create(
+def extract_text_from_image():    
+    response = client.chat.completions.create(
     model="gpt-4o-mini",
     messages=[
         {
@@ -56,7 +56,7 @@ response = client.chat.completions.create(
     max_tokens=300,
 )
 
-print(response.choices[0])
+    print(response.choices[0])
 
 
 #Function 
