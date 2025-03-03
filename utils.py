@@ -20,7 +20,7 @@ llm = ChatOpenAI(model=MODEL, temperature=0)
 # create client
 client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
-#Function 
+#Function to extract text from pdf
 def extract_text_from_pdf(pdf_path):
     pdf_text = ""
     # read the pdf
@@ -40,7 +40,7 @@ def encode_image(image_path):
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode("utf-8")
 
-
+#Function to extract text from an image
 def extract_text_from_image(image_path:str):
     
     # Encode the image to base64
@@ -67,11 +67,10 @@ def extract_text_from_image(image_path:str):
     )
 
     return response.choices[0].message.content
-    #print(response.choices[0])
 
 
 
-#Function 
+#Function to analyse bias
 def bias_analyser(text: str):
     prompt = ChatPromptTemplate.from_template(pt.BIAS_ANALYSER_PROMPT)
     model=llm
