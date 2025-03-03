@@ -33,10 +33,45 @@ def extract_text_from_pdf(pdf_path):
     final_text = pdf_text.strip().replace("\n", "")        
     return pdf_text
 
-#Function
 
-#def generate_text_from_image():
-def extract_text_from_image():    
+# Function to encode the image
+def encode_image(image_path):
+    with open(image_path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode("utf-8")
+
+
+def extract_text_from_image(image_path:str):
+    
+    # Encode the image to base64
+    base64_image = encode_image(image_path)
+
+    response = client.chat.completions.create(
+    model=MODEL,
+
+    messages=[
+        {
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": pt.IMAGE_INSTRUCTIONS,
+                },
+                {
+                    "type": "image_url",
+                    "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"},
+                },
+            ],
+        }
+    ],
+    max_tokens=300,
+    )
+
+    #return response.choices[0]
+    print(response.choices[0])
+
+
+#Function
+def extract_text_from_image_url():    
     response = client.chat.completions.create(
     model="gpt-4o-mini",
     messages=[
@@ -54,15 +89,16 @@ def extract_text_from_image():
         }
     ],
     max_tokens=300,
-)
+    )
 
-    print(response.choices[0])
+    print(response.choices[0])   
+    
+
 
 
 #Function 
 def bias_analyser(text: str):
     prompt = ChatPromptTemplate.from_template(pt.BIAS_ANALYSER_PROMPT)
-    #model = ChatOpenAI(model="gpt-4o-mini", temperature=0)
     model=llm
     output_parser = StrOutputParser()
 
