@@ -66,7 +66,14 @@ elif option == 'Image':
             with open("myImage.jpg", "wb") as f:
                 f.write(image.getbuffer())
             
-            extract_text_from_image("myImage.jpg")
+            with st.spinner("Extracting text from input Image and Analysing bias............"):
+            extracted_text=extract_text_from_image("myImage.jpg")
+            # get the answer
+            answer = bias_analyser(extracted_text)
+        #Display the bias     
+        st.subheader(" Bias Analyser Result")
+        st.write(answer )
+            
 
 
 
