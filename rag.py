@@ -64,7 +64,6 @@ def extract_text_from_image(image_path:str):
             ],
         }
     ],
-    max_tokens=300,
     )
 
     return response.choices[0].message.content
