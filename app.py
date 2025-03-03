@@ -1,8 +1,8 @@
 import streamlit as st
 from streamlit_pdf_viewer import pdf_viewer
-from rag import extract_text_from_pdf
-from rag import bias_analyser
-from rag import extract_text_from_image
+from utils import extract_text_from_pdf
+from utils import bias_analyser
+from utils import extract_text_from_image
 
 
 PDF_NAME = "uploaded.pdf"
