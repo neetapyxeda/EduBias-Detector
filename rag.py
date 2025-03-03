@@ -6,6 +6,7 @@ import streamlit as st
 import os
 import PyPDF2
 import prompts as pt
+import base64
 
 #keys
 os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
