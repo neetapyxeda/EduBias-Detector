@@ -53,8 +53,6 @@ elif option == 'Text':
         #Display the bias     
         st.subheader(" Bias Analyser Result")
         st.write(answer )
-
-        extract_text_from_image()
     
 
 elif option == 'Image':
@@ -65,6 +63,11 @@ elif option == 'Image':
             st.subheader("IMAGE 🏞️")
             #displaying the image
             st.image(image, caption = "Uploaded Image")
+            with open("image.jpg", "wb") as f:
+                f.write(uploaded_file.getbuffer())
+            
+            extract_text_from_image("image.jpg")
+
 
 
     
