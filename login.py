@@ -4,8 +4,6 @@ from app import chat
 
 IMAGE_ADDRESS = "https://europe.ippf.org/sites/europe/files/styles/header_background_xs/public/2022-12/illustration-14-website-no-logos-no-text.jpg?itok=y-vJsgkS"
 
-st.caption(f"Streamlit version {st.__version__}") #for tessting
-st.caption(f"Authlib version {authlib.__version__}") #for testing
 # title
 st.title("EduBias Detector")
 
