@@ -4,8 +4,8 @@ from app import chat
 
 IMAGE_ADDRESS = "https://europe.ippf.org/sites/europe/files/styles/header_background_xs/public/2022-12/illustration-14-website-no-logos-no-text.jpg?itok=y-vJsgkS"
 
-st.caption(f"Streamlit version {st.__version__}")
-st.caption(f"Authlib version {authlib.__version__}")
+st.caption(f"Streamlit version {st.__version__}") #for tessting
+st.caption(f"Authlib version {authlib.__version__}") #for testing
 # title
 st.title("EduBias Detector")
 
@@ -16,7 +16,7 @@ if not st.experimental_user.is_logged_in:
         st.login()
 
 else:
-    st.html(f"Hello, <span style='color: orange; font-weight: bold;'>{st.experimental_user.name}</span>!")
+    #st.html(f"Hello, <span style='color: orange; font-weight: bold;'>{st.experimental_user.name}</span>!")
     if st.sidebar.button("Log out", type="secondary", icon=":material/logout:"):
         st.logout()
     chat()
