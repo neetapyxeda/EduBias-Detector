@@ -27,7 +27,7 @@ def chat():
         if uploaded_file:
         # save the file
             with open(PDF_NAME, "wb") as f:
-            f.write(uploaded_file.getbuffer())
+                f.write(uploaded_file.getbuffer())
 
             with st.sidebar:
                 st.subheader("PDF 📖")
