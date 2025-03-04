@@ -9,7 +9,7 @@ import prompts as pt
 import base64
 
 #keys
-os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"] #st.secrets[keys]["OPENAI_API_KEY"]
+os.environ["OPENAI_API_KEY"] =st.secrets[keys]["OPENAI_API_KEY"]
 
 #CONSTANTS
 MODEL="gpt-4o-mini"
