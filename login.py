@@ -1,1 +1,17 @@
+import streamlit as st
+import authlib
 
+IMAGE_ADDRESS = "https://europe.ippf.org/sites/europe/files/styles/header_background_xs/public/2022-12/illustration-14-website-no-logos-no-text.jpg?itok=y-vJsgkS"
+
+# title
+st.title("EduBias Detector")
+if not st.experimental_user.is_logged_in:
+    if st.button("Log in with Google", type="primary", icon=":material/login:"):
+        st.login()
+else:
+    st.html(f"Hello, <span style='color: orange; font-weight: bold;'>{st.experimental_user.name}</span>!")
+    if st.button("Log out", type="secondary", icon=":material/logout:"):
+        st.logout()
+    
+st.caption(f"Streamlit version {st.__version__}")
+st.caption(f"Authlib version {authlib.__version__}")
