@@ -5,6 +5,9 @@ IMAGE_ADDRESS = "https://europe.ippf.org/sites/europe/files/styles/header_backgr
 
 # title
 st.title("EduBias Detector")
+
+st.image(IMAGE_ADDRESS)
+
 if not st.experimental_user.is_logged_in:
     if st.button("Log in with Google", type="primary", icon=":material/login:"):
         st.login()
