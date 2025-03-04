@@ -1,6 +1,5 @@
 import streamlit as st
 import authlib
-import pandas as pd
 from app import chat
 
 IMAGE_ADDRESS = "https://europe.ippf.org/sites/europe/files/styles/header_background_xs/public/2022-12/illustration-14-website-no-logos-no-text.jpg?itok=y-vJsgkS"
