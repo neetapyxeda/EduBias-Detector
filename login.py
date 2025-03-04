@@ -10,10 +10,6 @@ st.title("EduBias Detector")
 
 st.image(IMAGE_ADDRESS)
 
-
-st.write(st.experimental_user)
-
-
 if not st.experimental_user.is_logged_in:
     if st.sidebar.button("Log in with Google", type="primary", icon=":material/login:"):
         st.login()
@@ -23,6 +19,4 @@ else:
     if st.sidebar.button("Log out", type="secondary", icon=":material/logout:"):
         st.logout()
     chat()
-    
-#st.caption(f"Streamlit version {st.__version__}")
-#st.caption(f"Authlib version {authlib.__version__}")
+
