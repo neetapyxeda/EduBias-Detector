@@ -3,7 +3,7 @@ You are very good at analysing biases and you are tasked with analyzing the text
 
 Here is the text input : {text}
 
-Please focus on identifying biases related to culture,race, profession, gender, disabilities,value  and religion . If no biases are detected, categorize the text as "no-bias." 
+Please focus on identifying biases related to race, profession, gender, disabilities,value  and religion . If no biases are detected, categorize the text as "no-bias." 
 
 For each document, provide the analysis in the format outlined below. 
 
