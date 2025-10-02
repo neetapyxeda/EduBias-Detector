@@ -14,7 +14,7 @@ st.title("EduBias Detector")
 # set the image
 st.image(IMAGE_ADDRESS)
 
-def chat():
+if 1:
     
     option = st.selectbox(
         "Please select the type of educational resource you have",
@@ -57,7 +57,6 @@ def chat():
             st.subheader(" Bias Analyser Result")
             st.write(answer )
         
-chat()
     elif option == 'Image':
         image=st.file_uploader("Upload an image",type= ['jpeg','png','jpg'])
         
@@ -77,8 +76,3 @@ chat()
             st.subheader(" Bias Analyser Result")
             st.write(answer )
                 
-
-
-
-        
-        
