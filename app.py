@@ -57,7 +57,7 @@ def chat():
             st.subheader(" Bias Analyser Result")
             st.write(answer )
         
-
+chat()
     elif option == 'Image':
         image=st.file_uploader("Upload an image",type= ['jpeg','png','jpg'])
         
