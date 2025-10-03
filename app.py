@@ -14,7 +14,7 @@ st.title("EduBias Detector")
 # set the image
 st.image(IMAGE_ADDRESS)
 
-if 1:
+def chat():
     
     option = st.selectbox(
         "Please select the type of educational resource you have",
